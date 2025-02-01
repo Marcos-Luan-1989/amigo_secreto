@@ -2,17 +2,19 @@
 //criando a lista para receber os nomes dos amigos participantes
 let listaDeAmigos = [];
 
-//criando a variável que recebe o valor do que foi digitado no campo nome do amigo
-let nomeDoAmigo = document.getElementById("amigo").value;
-
-
 function adicionarAmigo(){
+    //criando a variavel para receber o texto digitado.
+    let nomeDoAmigo = document.getElementById("amigo").value;
+
+    //validando se o campo não está vazio
     if (nomeDoAmigo == ""){
         alert("Por favor, insira um nome.");
     } else{
         listaDeAmigos.push(nomeDoAmigo);
         console.log(`${nomeDoAmigo} inserido a lista.`);
-        console.log(listaDeAmigos); 
+        limparCampoNome();        
+        console.log(listaDeAmigos);
+        atualizarListaDeAmigosHtml();
     }
 
 }
@@ -23,6 +25,7 @@ function limparCampoNome (){
 }
 
 function sortearAmigo(){
+    atualizarListaDeAmigosHtml();
 
 }
 
