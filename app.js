@@ -39,6 +39,9 @@ function atualizarListaDeAmigosHtml (){
     //limpando a lista para garantir que não haverão duplicatas.
     listaHtml.innerHTML = "";
 
+    let resultadoSorteio = document.getElementById("resultado");
+    resultadoSorteio.innerHTML = "";
+
     //percorrendo o array para criar os elementos de linha dentro da tabela
     for (let contador = 0; contador < listaDeAmigos.length; contador++ ) {
 
@@ -96,20 +99,34 @@ function atualizarResultado() {
         
         return alert("Por favor insira o nome de pelo menos 2 pessoas para realizar o sorteio.")
 
-    } else {
+    } else{
+                       
+        //recebendo o elemento lista<ul> dentro do javascript
+        let listaHtml = document.getElementById("listaAmigos");
 
-            //recebendo o elemento lista<ul> dentro do javascript
-    let listaHtml = document.getElementById("listaAmigos");
+        //limpando a lista para garantir que não haverão duplicatas.
+        listaHtml.innerHTML = "";
 
-    //limpando a lista para garantir que não haverão duplicatas.
-    listaHtml.innerHTML = "";
+        let resultadoSorteio = document.getElementById("resultado");
+        resultadoSorteio.innerHTML = "";
 
-            let resultadoSorteio = document.getElementById("resultado");
-            resultadoSorteio.innerHTML = "";
+        if (listaDeAmigos.includes(amigoSorteado)){
 
             let mostrarResultado = document.createElement("li");
-            mostrarResultado.textContent = amigoSorteado;
+
+            mostrarResultado.textContent = `O amigo sorteado é: ${amigoSorteado}`;
             resultadoSorteio.appendChild(mostrarResultado);
-    
+       
+           
+
+        } else{
+
+            let mostrarResultado = document.createElement("li");
+
+            mostrarResultado.textContent = `Todos os amigos inseridos já foram sorteados. Não há mais amigos disponíveis para sortear!`;
+            resultadoSorteio.appendChild(mostrarResultado);
+
+
         }
+    }
 }
