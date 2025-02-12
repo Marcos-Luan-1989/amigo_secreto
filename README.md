@@ -46,7 +46,11 @@ O Amigo secreto conta com algumas funcionalidades, entre elas estão:
 
 <h2>📁 Acesso ao projeto</h2>
 
-Você pode acessar ou baixar o repositório do projeto usando o link a seguir: <a> https://github.com/Marcos-Luan-1989/amigo_secreto.git </a>
+Você pode acessar ou baixar o repositório do projeto usando o link a seguir: <a> https://github.com/Marcos-Luan-1989/amigo_secreto.git </a> <br>
+Abaixo temos uma gif que mostra como realizar o download após acessar o diretório.
+
+![Video baixando repositório](https://github.com/user-attachments/assets/b357965e-7c4e-4e66-9758-5f52a9d59d1d)
+
 
 <h2>🛠️ Abrir e rodar o projeto</h2>
 
